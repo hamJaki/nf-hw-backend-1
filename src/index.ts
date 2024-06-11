@@ -5,7 +5,7 @@ import globalRouter from './global-router';
 import { logger } from './logger';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 connectDB();
 
@@ -14,7 +14,7 @@ app.use(express.json());
 app.use('/api/v1/',globalRouter);
 
 
-app.get('/helloworld',(request,response) =>{
+app.get('/',(request,response) =>{
   response.send("Hello World!");
 })
 
